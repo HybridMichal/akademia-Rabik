@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    font-family: 'SF Pro Display', sans-serif;
+    letter-spacing: 0.5px;
+    color: #1A232F;
+}
+img{
+    vertical-align: middle;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #d7eaff ;
+  height: 50px;
+  margin: 0px 140px;
+}
+.head1-t1{
+   margin-right: 3rem;
+   font-size: 13px; 
+}
+.head1-b1{
+    padding: 6px 10px;
+    font-size: 12px;
+    color: #989ca2;
+    text-decoration: none;
+    border-radius: 50rem;
+    border-style: solid;
+    background-color: rgba(152, 156, 162, 0.15);
+    border-color: rgba(152, 156, 162, 0.15);
+    border-width: 1px;
+}
+nav{
+    padding: 8px;
+}
+.nav1{
+    margin: 0px 140px;
+    padding: 0px 12px;
+    display: flex;
+}
+.nav1-i1{
+    padding-top: 0.3rem;
+    padding-bottom: 0.3em;
+    margin-right: 2rem;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-right: 195px;
+}
+nav ul li {
+    margin-right: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+.nav1-b1{
+    background-color: #3597ff;
+    border-color: #3597ff;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 0.5rem;
+    padding: 0px 20px;
+    margin-top: 10px;
+    max-height: 45px;
+    
+}
+.welcome1 {
+    background-color: #3597ff;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main {
+    color: white;
+    width: 500px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main h1 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.main p {
+    font-size: 16px;
+}
+.smol {
+    font-weight: normal;
+} 
+.why-openlab {
+    font-weight: bold;
+    font-size: larger;
+    justify-content: center;
+    margin-top: 2cm;
+    display: flex;
+    padding-left: 10px;
+}
+.openlab-p {
+    color: #566b8d;
+    text-align: center;
+    font-size: medium;
+    justify-content: center;
+    display: flex;
+    padding: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 50px;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.cards h5 {
+    font-weight: bold;
+    padding-top: 16px;
+}
+.cards .karta {
+    width: 350px;
+}
+.cards p {
+    color: #566b8d;
+}
+
+.cards-section {
+    padding-bottom: 48px;
+}
+.cisla-text {
+    padding-left: 100px;
+    display: flex;
+    justify-content: left;
+}
+
+.space {
+    padding-top: 12px;
+    display: flex;
+    justify-content: left;
+    
+}
+.cisla-textsmol {
+    padding-left: 100px;
+    padding-right: 800px;
+    color: #566b8d;
+}
+.cisla-textbold {
+    padding-bottom: 25px;
+    padding-left: 100px;
+    padding-top: 150px;
+}
+
