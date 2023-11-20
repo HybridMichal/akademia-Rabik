@@ -3,7 +3,9 @@ body{
     font-family: 'SF Pro Display', sans-serif;
     letter-spacing: 0.5px;
     color: #1A232F;
+    
 }
+header
 img{
     vertical-align: middle;
 }
@@ -17,6 +19,10 @@ header{
   border-bottom: 1px solid #d7eaff ;
   height: 50px;
   margin: 0px 140px;
+  max-width: 1320px; 
+  max-width: 1320px; 
+  margin-left: auto;
+  margin-right: auto;
 }
 .head1-t1{
    margin-right: 3rem;
@@ -34,11 +40,12 @@ header{
     border-width: 1px;
 }
 nav{
-    padding: 8px;
+    padding: 8px 0px;
 }
 .nav1{
-    margin: 0px 140px;
-    padding: 0px 12px;
+    max-width: 1320px; 
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
 }
 .nav1-i1{
@@ -74,12 +81,11 @@ nav ul li {
 .welcome1 {
     background-color: #3597ff;
     display: flex;
-    justify-content: center;
-}
-
-.welcome2 {
-    display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+}
+.welcome1 img{
+    margin-right: 200px;
 }
 
 .main {
@@ -89,6 +95,7 @@ nav ul li {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-left: 200px
 }
 
 .main h1 {
