@@ -1,6 +1,7 @@
 *, ::after, ::before {
     box-sizing: border-box;
 }
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -45,11 +46,12 @@ header{
 }
 nav{
     padding: 8px 0px;
-}
-.nav1{
     max-width: 1320px; 
     margin-left: auto;
     margin-right: auto;
+}
+.nav1{
+
     display: flex;
     padding: 0px 12px;
 }
@@ -67,7 +69,7 @@ nav ul{
 nav ul li{
     margin-right: 24px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 14px;
 }
 .nav1-b1{
@@ -89,6 +91,8 @@ nav ul li{
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-bottom: 48px;
+    max-width: none !important;
+    width: ;
 }
 .main{
     color: white;
@@ -99,12 +103,10 @@ nav ul li{
     margin: 48px 0px;
     padding: 48px 12px;
 }
-
 .welcome-t1{
     font-size: 40px;
     font-weight: 300;
 }
-
 .welcome-t2{
     font-size: 16px;
     color: white;
@@ -125,7 +127,6 @@ nav ul li{
     display: flex;
     margin-bottom: 48px;
 } 
-
 .why-openlab-t2 {
     text-align: center;
     font-size: medium;
@@ -149,26 +150,36 @@ nav ul li{
 
 
 
-.cisla-text {
-    padding-left: 100px;
+.vizia{
+    max-width: 1320px; 
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    justify-content: left;
+    flex-direction: row;
+    padding: 68px 0px;
+}
+.vizia-t{
+    padding: 12px 0;
+
+}
+.vizia-t1{
+    font-size: 1.5rem;
+    margin-bottom: 48px;;
 }
 
-.space {
-    padding-top: 12px;
-    display: flex;
-    justify-content: left;
-    
+.vizia-t1 h2 {
+    font-weight: lighter;
 }
-.cisla-textsmol {
-    padding-left: 100px;
-    padding-right: 800px;
-    color: #566b8d;
+.vizia-t1 span{
+    font-weight: bold;
 }
-.cisla-textbold {
-    padding-bottom: 25px;
-    padding-left: 100px;
-    padding-top: 150px;
+.cisla-placeholder{
+    width: 844px;
+    height: 398px;
+    align-content: end;
+    background-color: blue;
+    justify-content: flex-end;
 }
+
+
 
