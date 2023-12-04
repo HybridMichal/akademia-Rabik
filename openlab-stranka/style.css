@@ -14,7 +14,8 @@ body {
     margin:0;
     font-family:"SF Pro Display",sans-serif;
     letter-spacing:.5px;
-    color:#1a232f
+    color:#1a232f;
+    overflow-x: hidden;
 }
 header {
     display:flex;
@@ -336,4 +337,88 @@ nav ul li {
     font-size: 18px;
     color: #3597ff;
     font-weight: 200;
+}
+.students{
+    background-color: #f3f9ff;
+    padding-top: 48px;
+}
+.students-container{
+    max-width: 1320px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.students-t{
+    width:50%
+}
+.students-t1{
+    font-weight: 700;
+    font-size: 2.3rem;
+    padding-bottom: 42px;
+    margin: 0;
+}
+.students-t1 span{
+    font-weight: lighter;
+}
+.students-t2{
+    color: #566b8d;
+    margin-bottom: 48px;
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    max-width: 95%;
+    position: relative;
+}
+.students-t2 img{
+    position: absolute;
+    bottom: 90px;
+    right: 450px;
+}
+.students-i1{
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    margin-left: 110px;
+}
+.students-t3-b{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-left: 15px;
+}
+.students-t3{
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    color: #566b8d;
+}
+.students-t3 img{
+    margin-right: 8px;
+}
+.students-b-container{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.students-b{
+    display: flex;
+    background-color: #adc5e3;
+    height: 30px;
+    width: 30px;
+    border-radius: 15%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+}
+.students-b :hover{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    border-radius: 15%;
+    background-color:#5b94d7;
+}
+.students-b img{
+
 }
