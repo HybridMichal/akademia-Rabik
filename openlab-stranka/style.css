@@ -258,7 +258,7 @@ nav ul li {
     margin: auto;
     justify-content: flex;
 }
-.labs2-b{
+.text-arrow-card{
     border-radius: 4%;
     padding: 24px 48px 48px 48px;
     width: 33%;
@@ -266,17 +266,17 @@ nav ul li {
     flex-direction: column;
     justify-content: space-between;
 }
-.labs2-b-t1{
+.text-arrow-card-t1{
     font-size: 20px;
     margin: 0 0 8px;
 }
-.labs2-b-t2{
+.text-arrow-card-t2{
     font-size: 14px;
     margin: 0 0 10px;
     color:#566b8d;
     font-weight: 500;
 }
-.labs2-b-i{
+.text-arrow-card-i{
     display: flex;    
     align-self: flex-end;
 }
@@ -338,9 +338,16 @@ nav ul li {
     color: #3597ff;
     font-weight: 200;
 }
+.p-letter{
+    width: 450px;
+    position: absolute;
+    top: 2300px;
+    right: -250px;  
+}
 .students{
     background-color: #f3f9ff;
     padding-top: 48px;
+    margin-bottom: 48px;
 }
 .students-container{
     max-width: 1320px;
@@ -419,6 +426,21 @@ nav ul li {
     border-radius: 15%;
     background-color:#5b94d7;
 }
-.students-b img{
-
+.join{
+    max-width: 1320px;
+    margin: auto;
+    padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+}
+.join-t1{
+    margin: 0;
+    font-weight: 100;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.join-card-container{
+    display: flex;
+    flex-direction: row;
 }
