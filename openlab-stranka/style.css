@@ -3,6 +3,9 @@
 ::before {
   box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+}
 body::-webkit-scrollbar {
   display: none;
 }
@@ -37,7 +40,6 @@ header {
   padding: 6px 10px;
   font-size: 12px;
   color: #989ca2;
-  text-decoration: none;
   border-radius: 50rem;
   border-style: solid;
   background-color: #989ca226;
@@ -337,7 +339,6 @@ nav ul li {
   justify-content: space-between;
 }
 .schools-card-t2 a {
-  text-decoration: none;
   font-size: 18px;
   color: #3597ff;
   font-weight: 200;
@@ -450,6 +451,84 @@ nav ul li {
 }
 
 
+
+.podcast{
+  padding: 3rem 0;
+}
+.podcast-container{
+  max-width: 1320px;
+  margin: auto; 
+  display: flex;
+  flex-direction: row;
+}
+.podcast-t{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.podcast-t1{
+  margin-bottom: 16px;
+  font-size: 40px;
+  font-weight: 100;
+}
+.podcast-t2{
+  margin-bottom: 26px;
+  line-height: 150%;
+  color: #566b8d;
+} 
+.podcast-icon-container{
+  margin-bottom: 24px;
+}
+.podcast-icon{
+  margin-right: 10px;
+}
+.podcast-b{
+  display: flex;
+  color: white;
+  background-color: #3597ff;
+  padding: 18px 50px;
+  font-size: 14px;
+  font-weight: 700;
+  width: fit-content;
+  border-radius: 6px;
+}
+.podcast-i-container{
+  width: 60%;
+  display: flex;
+  justify-content: end;
+  margin-left: auto;
+}
+.podcast-i{
+  max-width: 80%;
+  padding: 12px 0 ;
+}
+.support{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+}
+.support-t-container{
+  max-width: 1320px;
+  margin: auto; 
+  padding: 24 12px;
+}
+.support-t{
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 3rem;
+}
+.support-img{
+  padding:  0 12px;
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.support-img img{
+  padding: 0 24px;
+  max-width: 15%;
+  object-fit: contain;
+}
 .newsletter{
     padding: 3rem 0;
 }
@@ -522,7 +601,6 @@ footer{
 }
 .footer-container4 a{
     margin-left: 8px;
-    text-decoration: none;
 }
 .cube{
     width: 8%;
