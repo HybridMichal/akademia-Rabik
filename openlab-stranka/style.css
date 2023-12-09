@@ -602,10 +602,50 @@ nav ul li {
   font-weight: 500;
   line-height: 150%;
 }
-
-
-
-
+.us{
+  display: flex;
+  flex-direction: column;
+  max-width: 1320px;
+  margin: auto; 
+}
+.us-t1{
+  margin: 0;
+  font-size: 40px;
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 24px 12px;
+}
+.us-card-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.us-card{
+  width: 25%;
+  flex-direction: column;
+}
+.us-card-image{
+  width: 90%;
+  border-radius: 2%;
+}
+.us-card-t{
+  padding: 1rem 0;
+}
+.us-card-t1{
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #566b8d;
+  font-weight: bold;
+}
+.us-card-t2{
+  font-size: 20px;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+.us-card-t3{
+  font-size: 16px;
+  color: #566b8d;
+}
 
 .podcast{
   padding: 3rem 0;
