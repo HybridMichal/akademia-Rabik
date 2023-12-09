@@ -26,11 +26,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #d7eaff;
   height: 50px;
   margin: 0 140px;
   max-width: 1320px;
   margin: auto;
+  border-bottom: 1px solid #d7eaff;
 }
 .head1-t1 {
   margin-right: 3rem;
@@ -87,30 +87,35 @@ nav ul li {
 }
 .welcome {
   background-color: #3597ff;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-bottom: 48px;
-  max-width: none !important;
+  margin-bottom: 3rem;
 }
-.welcome1 {
+.welcome-container {
+  max-width: 1320px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+.welcome-t {
   color: #fff;
-  width: 500px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  margin: 48px 0;
-  padding: 48px 12px;
+  margin: 3rem 0;
+  padding: 3rem 12px;
+  width: 40%;
 }
-.welcome1-t1 {
+.welcome-t1 {
   font-size: 40px;
   font-weight: 300;
+  margin-bottom: 24px;
 }
-
-.welcome1-t2 {
+.welcome-t2 {
   font-size: 16px;
   color: #fff;
 }
+.welcome-i1{
+  justify-content: center;
+  margin: auto;
+  }
 .circle {
   width: 480px;
   position: absolute;
@@ -130,14 +135,14 @@ nav ul li {
   font-weight: 400;
   font-size: 2.5rem;
   display: flex;
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
 }
 .why-openlab-t2 {
   text-align: center;
   font-size: medium;
   justify-content: center;
   display: flex;
-  margin: 0 48px 16px;
+  margin: 0 3rem 16px;
   color: #566b8d;
 }
 .cards {
@@ -150,7 +155,7 @@ nav ul li {
 }
 .karta {
   max-width: 350px;
-  padding: 48px 12px 0;
+  padding: 3rem 12px 0;
 }
 .vizia {
   max-width: 1320px;
@@ -166,7 +171,7 @@ nav ul li {
 }
 .vizia-t1 {
   font-size: 1.5rem;
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
 }
 .vizia-t1 h2 {
   font-weight: lighter;
@@ -180,7 +185,8 @@ nav ul li {
 }
 .cisla {
   display: grid;
-  grid-template-columns: 200px 200px;
+  grid-template-columns: 250px 250px;
+  grid-template-rows: 200px 2 00px;
   grid-row: auto auto;
   grid-column-gap: 2px;
   grid-row-gap: 2px;
@@ -266,7 +272,7 @@ nav ul li {
 }
 .text-arrow-card {
   border-radius: 4%;
-  padding: 24px 48px 48px 48px;
+  padding: 24px 3rem 3rem 3rem;
   width: 33%;
   display: flex;
   flex-direction: column;
@@ -291,7 +297,7 @@ nav ul li {
   text-shadow: none;
 }
 .schools {
-  padding: 48px 0;
+  padding: 3rem 0;
   max-width: 1320px;
   margin: auto;
 }
@@ -302,7 +308,7 @@ nav ul li {
 }
 .schools-t-container {
   margin: auto;
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
 }
 .schools-t1 {
   font-weight: 300 !important;
@@ -351,8 +357,8 @@ nav ul li {
 }
 .students {
   background-color: #f3f9ff;
-  padding-top: 48px;
-  margin-bottom: 48px;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
 }
 .students-container {
   max-width: 1320px;
@@ -375,7 +381,7 @@ nav ul li {
 }
 .students-t2 {
   color: #566b8d;
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
   padding: 0 15px;
   font-size: 16px;
   line-height: 150%;
@@ -409,12 +415,12 @@ nav ul li {
 .students-t3 img {
   margin-right: 8px;
 }
-.students-b-container {
+.arrow-button-container {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-.students-b {
+.arrow-button {
   display: flex;
   background-color: #adc5e3;
   height: 30px;
@@ -424,7 +430,7 @@ nav ul li {
   align-items: center;
   margin-left: 8px;
 }
-.students-b :hover {
+.arrow-button :hover {
   display: flex;
   height: 30px;
   width: 30px;
@@ -434,7 +440,7 @@ nav ul li {
 .join {
   max-width: 1320px;
   margin: auto;
-  padding-top: 48px;
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -443,12 +449,161 @@ nav ul li {
   font-weight: 100;
   font-size: 40px;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
 }
 .join-card-container {
   display: flex;
   flex-direction: row;
 }
+
+/* skiped section comes here */
+.circle2 {
+  width: 480px;
+  position: absolute;
+  top: 4000px;
+  right: -250px;
+}
+/* skiped section comes here */
+
+
+
+.projects {
+  padding: 3rem 0;
+  max-width: 1320px;
+  margin: auto;
+}
+.projects-container {
+  border-bottom: 1px solid #d7eaff;
+  padding: 3rem 12px;
+  display: flex;
+  flex-direction: column;
+}
+.projects1{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.projects1-t1{
+  margin: 0;
+  font-size: 40px;
+  font-weight: 100;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.projects1-t2{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 0 3rem;
+  margin: 0 3rem 3rem 3rem;
+  color: #566b8d;
+}
+.projects2-t1{
+  margin-bottom: 1.5rem;
+}
+.ciara{
+  width: 50px;
+  height: 1px;
+  background: #566b8d;
+  margin-bottom: 1.5rem;
+}
+.projects2-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.projects2-t2{
+  width: 35%;
+  margin-bottom: 1rem;
+}
+.projects2-t2 h2{
+  font-size: 28px;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+.projects2-t2 p{
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #566b8d;
+  line-height: 150%;
+}
+.projects2-vid{
+  justify-content: right;
+  margin-left: auto ;
+}
+.projects3-dots{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 12px 0;
+}
+.projects3-dots div{
+  width: 9px;
+  height: 9px;
+  background: #d7eaff;
+  margin: 0 3px;
+  border-radius: 100%;
+}
+.projects3-dots div:hover{
+  background: #3597ff;
+}
+.projects3-link a{
+  color: #3597ff;
+}
+.a-letter{
+    width: 480px;
+    position: absolute;
+    top: 5000px;
+    left: -250px;
+    z-index: -1;
+}
+.special{
+  padding:  3rem 0;
+}
+.special-container{
+  max-width: 1320px;
+  margin: auto;
+  padding: 3rem 12px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #d7eaff;
+}
+.special1-t{
+  margin: 0;
+  font-size: 40px;
+  font-weight: 100;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.special-card-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+.special-card{
+  width: 25%;
+  padding: 3rem 12px 0 12px;
+  flex-direction: column;
+}
+.special-card-t{
+  padding: 24px 0 16px 0;
+}
+.special-card-t1{
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+.special-card-t2{
+  font-size: 16px;
+  color: #566b8d;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+
 
 
 
