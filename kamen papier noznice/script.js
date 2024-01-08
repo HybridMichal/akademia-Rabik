@@ -36,6 +36,12 @@ function Winner(player, opponent) {
 
 function play() {
     let playerInput = prompt("hráč: " + playerScore + "    \npočítač: " + computerScore + "\nvyber si kamen = k, papier = p alebo noznice = n").toLowerCase()
+
+    if (!['k', 'p', 'n'].includes(playerInput)) {
+        alert("Neplatný vstup! Vyber si iba k, p alebo n.");
+        play();
+    }
+
     const playerChoice = choices.find(selection => selection.name === playerInput) 
 
     const computerChoice = randomChoice() 
@@ -68,7 +74,7 @@ function updateScore(scorer) {
         computerScore += 1 
         computerScoreText.innerText = computerScore     
     }
-    //toto != najlepsi sposob
+    //toto neni ja viem najlepsi sposob
 }
 function endGame() {
 let reset = false 
