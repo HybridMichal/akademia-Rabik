@@ -38,8 +38,8 @@ function play() {
     let playerInput = prompt("hráč: " + playerScore + "    \npočítač: " + computerScore + "\nvyber si kamen = k, papier = p alebo noznice = n").toLowerCase()
 
     if (!['k', 'p', 'n'].includes(playerInput)) {
-        alert("Neplatný vstup! Vyber si iba k, p alebo n.");
-        play();
+        alert("Neplatný vstup! Vyber si iba k, p alebo n.") 
+        play() 
     }
 
     const playerChoice = choices.find(selection => selection.name === playerInput) 
