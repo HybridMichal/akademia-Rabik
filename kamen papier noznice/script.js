@@ -74,20 +74,27 @@ function updateScore(scorer) {
         computerScore += 1 
         computerScoreText.innerText = computerScore     
     }
-    //toto neni ja viem najlepsi sposob
 }
-function endGame() {
-let reset = false 
+function checkWinner() {
+    let winner = null;
     if (playerScore === 5) {
-        reset = confirm("vyhral si, chceš hrať znova?") 
+        winner = 'player';
+    } else if (computerScore === 5) {
+        winner = 'computer';
     }
-    if (computerScore === 5) {
-        reset = confirm("prehral si, chceš hrať znova?") 
+    endGame(winner);
+}
+
+function endGame(winner) {
+    let reset = false;
+    if (winner === 'player') {
+        reset = confirm("vyhral si, chceš hrať znova?");
+    } else if (winner === 'computer') {
+        reset = confirm("prehral si, chceš hrať znova?");
     }
 
-    if (reset){
-        location.reload() 
+    if (reset) {
+        location.reload();
     }
-    // toto by sa malo runnut iba raz to este musim vymysliet
-    
 }
+
