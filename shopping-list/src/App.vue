@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <h1>Shopping List</h1>
-    <input v-model="newItem" placeholder="Enter an item" @keyup.enter="addItem">
+    <input v-model="newItem.name" placeholder="Enter an item" @keyup.enter="addItem">
     <button @click="addItem">Add</button>
     <ul>
-      <li v-for="(item, index) in items" :key="index" class="item">
-        {{ item }}
-        <button @click="removeItem(index)">Remove</button>
+      <li v-for="item in validItems" :key="item.id" class="item">
+        {{ item.name }}
+        <button @click="removeItem(item)">Remove</button>
       </li>
     </ul>
     <h2>Removed Items</h2>
     <ul>
-      <li v-for="(removedItem, index) in removedItems" :key="index" class="item" :style="{ 'text-decoration': 'line-through' }">
-        {{ removedItem }}
+      <li v-for="removedItem in removedItems" :key="removedItem.id" class="item" :style="{ 'text-decoration': 'line-through' }">
+        {{ removedItem.name }}
       </li>
     </ul>
   </div>
@@ -23,24 +23,29 @@ export default {
   name: 'App',
   data() {
     return {
-      newItem: '',
+      newItem: { name: '', isRemoved: false },
       items: [],
-      removedItems: []
     };
   },
-
   methods: {
     addItem() {
-      if (this.newItem.trim() !== '') {
-        this.items.push(this.newItem);
-        this.newItem = '';
+      if (this.newItem.name.trim() !== '') {
+        this.items.push({ ...this.newItem, id: Date.now() });
+        this.newItem.name = '';
       }
     },
-    removeItem(index) {
-      const removedItem = this.items.splice(index, 1)[0];
-      this.removedItems.push(removedItem);
-  }
-}
+    removeItem(item) {
+      item.isRemoved = !item.isRemoved;
+    }
+  },
+  computed: {
+    validItems() {
+      return this.items.filter(item => !item.isRemoved);
+    },
+    removedItems() {
+      return this.items.filter(item => item.isRemoved);
+    }
+  },
 };
 </script>
 
