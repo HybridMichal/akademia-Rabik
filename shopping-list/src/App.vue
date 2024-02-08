@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <h1>Shopping List</h1>
-    <input v-model="newItem.name" placeholder="Enter an item" @keyup.enter="addItem">
+    <input v-model="itemName" placeholder="Enter an item" @keyup.enter="addItem">
     <button @click="addItem">Add</button>
     <ul>
-      <li v-for="item in validItems" :key="item.id" class="item">
+      <li v-for="item in validItems" :key="item.index" class="item">
         {{ item.name }}
         <button @click="removeItem(item)">Remove</button>
       </li>
@@ -23,20 +23,9 @@ export default {
   name: 'App',
   data() {
     return {
-      newItem: { name: '', isRemoved: false },
+      itemName: '',
       items: [],
     };
-  },
-  methods: {
-    addItem() {
-      if (this.newItem.name.trim() !== '') {
-        this.items.push({ ...this.newItem, id: Date.now() });
-        this.newItem.name = '';
-      }
-    },
-    removeItem(item) {
-      item.isRemoved = !item.isRemoved;
-    }
   },
   computed: {
     validItems() {
@@ -44,6 +33,18 @@ export default {
     },
     removedItems() {
       return this.items.filter(item => item.isRemoved);
+    }
+  },
+  methods: {
+    addItem() {
+      if (this.itemName.trim() !== '') {
+        this.items.push({ name: this.itemName, isRemoved: false });
+        this.itemName = '';
+        
+      }
+    },
+    removeItem(item) {
+      item.isRemoved = true;
     }
   },
 };
