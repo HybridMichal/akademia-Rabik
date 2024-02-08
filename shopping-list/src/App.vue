@@ -4,15 +4,15 @@
     <input v-model="itemName" placeholder="Enter an item" @keyup.enter="addItem">
     <button @click="addItem">Add</button>
     <ul>
-      <li v-for="item in validItems" :key="item.index" class="item">
+      <li v-for="(item, index) in validItems" :key="index" class="item">
         {{ item.name }}
         <button @click="removeItem(item)">Remove</button>
       </li>
     </ul>
     <h2>Removed Items</h2>
     <ul>
-      <li v-for="removedItem in removedItems" :key="removedItem.id" class="item" :style="{ 'text-decoration': 'line-through' }">
-        {{ removedItem.name }}
+      <li v-for="(item, index) in removedItems" :key="index" class="item" :style="{ 'text-decoration': 'line-through' }">
+        {{ item.name }}
       </li>
     </ul>
   </div>
@@ -40,7 +40,6 @@ export default {
       if (this.itemName.trim() !== '') {
         this.items.push({ name: this.itemName, isRemoved: false });
         this.itemName = '';
-        
       }
     },
     removeItem(item) {
