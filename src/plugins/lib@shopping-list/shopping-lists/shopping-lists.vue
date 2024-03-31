@@ -12,7 +12,8 @@
                         :key="list.id"
                         :class="{ active: selectedList === list.id }"
                     >
-                        <a @click="selectList(list.id)">{{ list.title }}</a>
+                        <a @click="redirectToDetail(list.id)">{{ list.title }}</a>
+                        <button @click="removeList(list.id)">Remove</button>
                     </li>
                 </ul>
             </div>
@@ -29,25 +30,11 @@
                 </template>
 
                 <template v-else>
-                    <div class="shopping-lists">
+                    <div v-for="list in shoppingLists" :key="list.id">
+                        <h2>{{ list.title }}</h2>
                         <ul>
-                            <li
-                                v-for="list in shoppingLists"
-                                :key="list.id"
-                                class="shopping-list-item"
-                                v-show="selectedList === list.id || showAll"
-                            >
-                                <ul>
-                                    <li
-                                        v-for="item in list.items"
-                                        :key="item.id"
-                                        class="shopping-list-item"
-                                    >
-                                        <input type="checkbox" class="item-checkbox" />
-                                        <span class="item-name">{{ item.name }}</span>
-                                        <span class="item-unit">{{ item.unit }}</span>
-                                    </li>
-                                </ul>
+                            <li v-for="item in list.items" :key="item.id">
+                                {{ item.name }}
                             </li>
                         </ul>
                     </div>
@@ -66,6 +53,7 @@ export default {
             shoppingLists: null,
             selectedList: null,
             showAll: false,
+            newItemName: "",
         };
     },
 
@@ -88,15 +76,46 @@ export default {
     methods: {
         selectList(listId) {
             this.selectedList = listId;
-            this.showAll = false;
         },
 
-        showAllLists() {
-            this.showAll = true;
+
+        async addItemToList(listId) {
+            try {
+                const newItem = {
+                    name: this.newItemName,
+                    unit: "pcs",
+                    is_checked: false,
+                };
+
+                const {
+                    data: { data: updatedList },
+                } = await axios.post(`/api/v1/shopping-lists/${listId}/items`, newItem);
+
+                const listIndex = this.shoppingLists.findIndex(list => list.id === listId);
+                if (listIndex !== -1) {
+                    this.shoppingLists[listIndex] = updatedList;
+                }
+
+                this.newItemName = "";
+            } catch (error) {
+                console.error("Error:", error);
+            }
         },
 
-        openShoppingListDetail({ id }) {
-            this.$router.push({ name: "Shopping List - Detail", params: { id } });
+        async removeList(listId) {
+            try {
+                await axios.delete(`/api/v1/shopping-lists/${listId}`);
+                this.shoppingLists = this.shoppingLists.filter(list => list.id !== listId);
+                if (this.selectedList === listId) {
+                    this.selectedList = null;
+                }
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        },
+
+        redirectToDetail(listId) {
+            this.$router.push({ name: "Shopping List - Detail", params: { id: listId } });
         },
     },
 };
